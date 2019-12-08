@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'black-post-office';
+  officeVisible = true;
+  packagesVisible = false;
+  showOffice(): void {
+    this.officeVisible = true;
+    this.packagesVisible = false;
+  };
+  showPackage(): void {
+    this.officeVisible = false;
+    this.packagesVisible = true;
+  };
 }
