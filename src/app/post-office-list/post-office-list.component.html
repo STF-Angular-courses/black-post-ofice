@@ -1,1 +1,6 @@
-<app-post-office-item *ngFor="let office of officesList" [office]="office" ></app-post-office-item>
+<div>
+  <button (click)="postsService.addOffice()" mat-raised-button color="primary">add office</button>
+  <app-post-office-item *ngFor="let office of postsService.officesList"
+                        [office]="office"
+                        [getPackagesByPost]="packageService.getPackagesByPost(office.id)"></app-post-office-item>
+</div>

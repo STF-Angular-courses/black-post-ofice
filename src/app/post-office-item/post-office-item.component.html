@@ -1,5 +1,9 @@
-<mat-card class="office__item">
+<mat-card class="office__item" style="flex-direction: column">
   <mat-card-title>Office name:{{office.name}}</mat-card-title>
   <mat-card-subtitle>Workers: {{office.numberOfPeople}}</mat-card-subtitle>
   <mat-card-content>Chief in office: {{office.chiefName}}</mat-card-content>
+  <p>Packages</p>
+  <ul>
+    <li *ngFor="let item of getPackagesByPost">{{item.id}}</li>
+  </ul>
 </mat-card>

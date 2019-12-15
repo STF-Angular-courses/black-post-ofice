@@ -1,0 +1,14 @@
+<mat-card class="package__item">
+  <div>
+    <mat-card-title>Id: {{package.id}}</mat-card-title>
+    <mat-card-subtitle>Type: {{package.type}}</mat-card-subtitle>
+    <mat-card-content>Thickness: {{package.thickness}}</mat-card-content>
+    <mat-card-content>Width: {{package.width}}</mat-card-content>
+    <mat-card-content>Height: {{package.height}}</mat-card-content>
+    <mat-card-content>Weight: {{package.weight}}</mat-card-content>
+    <mat-card-content>Address From - {{package.addressFrom}}</mat-card-content>
+    <mat-card-content>Address To - {{package.addressTo}}</mat-card-content>
+    <mat-card-subtitle>Office: {{package.postOffice}}</mat-card-subtitle>
+  </div>
+  <img style="width: 128px; height: 128px" mat-card-image src="{{package.picture}}" alt="pic">
+</mat-card>
