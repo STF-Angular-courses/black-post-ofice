@@ -12,9 +12,9 @@ export class AppComponent {
   showOffice(): void {
     this.officeVisible = true;
     this.packagesVisible = false;
-  };
+  }
   showPackage(): void {
     this.officeVisible = false;
     this.packagesVisible = true;
-  };
+  }
 }

@@ -1,4 +1,4 @@
-export default interface PackageItem {
+export default interface PackageItemModel {
   id: string;
   type: string;
   thickness?: number;
@@ -8,4 +8,5 @@ export default interface PackageItem {
   addressFrom: string;
   addressTo: string;
   picture: string;
+  postOffice: number;
 }

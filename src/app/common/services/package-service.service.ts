@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import PackageItemModel from '../../../models/package-item.model';
-import PostItemModel from '../../../models/post-item.model';
 
 @Injectable({
   providedIn: 'root'
@@ -158,7 +157,7 @@ export class PackageServiceService {
     });
   }
 
-  getPackagesByPost(id: number) {
+  getPackagesByPost(id: number): Array<PackageItemModel> {
     return this.packagesList.filter(item => item.postOffice === id);
   }
 }
