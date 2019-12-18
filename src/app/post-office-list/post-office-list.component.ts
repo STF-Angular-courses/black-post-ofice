@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
-import PostItem from '../../models/PostItem';
+import {PostsServiceService} from '../common/services/posts-service.service';
+import {PackageServiceService} from '../common/services/package-service.service';
 
 @Component({
   selector: 'app-post-office-list',
@@ -7,25 +8,8 @@ import PostItem from '../../models/PostItem';
   styleUrls: ['./post-office-list.component.less']
 })
 export class PostOfficeListComponent {
-  officesList: Array<PostItem> = [
-    {
-      name: 'First one',
-      numberOfPeople: 25,
-      chiefName: 'Anna Smith'
-    },
-    {
-      name: 'Something old',
-      numberOfPeople: 40,
-      chiefName: 'John Bow'
-    },
-    {
-      name: 'First from end',
-      numberOfPeople: 125,
-      chiefName: 'Anna Gold'
-    }, {
-      name: 'Home',
-      numberOfPeople: 250,
-      chiefName: 'James Bond'
-    },
-  ];
+  constructor(
+    private postsService: PostsServiceService,
+    private packageService: PackageServiceService
+  ) {  }
 }

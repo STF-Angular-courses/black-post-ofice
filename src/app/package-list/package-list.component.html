@@ -1,0 +1,7 @@
+<div>
+<div style="display: flex; justify-content: space-around">
+  <button mat-raised-button color="accent" (click)="packageService.addPackage()">add package</button>
+  <button mat-raised-button color="accent" (click)="packageService.addLetter()">add letter</button>
+</div>
+  <app-package-item *ngFor="let packageItem of packageService.packagesList" [package]="packageItem"></app-package-item>
+</div>

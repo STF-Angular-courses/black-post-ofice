@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
-import PostItem from '../../models/PostItem';
+import PostItemModel from '../../models/post-item.model';
+import PackageItemModel from '../../models/package-item.model';
 
 @Component({
   selector: 'app-post-office-item',
@@ -7,5 +8,9 @@ import PostItem from '../../models/PostItem';
   styleUrls: ['./post-office-item.component.less']
 })
 export class PostOfficeItemComponent  {
-  @Input() office: PostItem;
+  @Input() office: PostItemModel;
+  @Input() getPackagesByPost: Array<PackageItemModel>;
+  constructor() {
+    console.log(this.getPackagesByPost);
+  }
 }

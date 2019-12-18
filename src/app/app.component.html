@@ -5,4 +5,4 @@
   <h2 (click)="showPackage()">Packages list</h2>
 </div>
 <app-post-office-list *ngIf="officeVisible && !packagesVisible"></app-post-office-list>
-<h2 *ngIf="packagesVisible && !officeVisible">packageslist, later</h2>
+<app-package-list *ngIf="packagesVisible && !officeVisible"></app-package-list>

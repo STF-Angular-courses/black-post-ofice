@@ -1,6 +1,6 @@
-export default interface PostItem  {
+export default interface PostItemModel  {
+  id: number;
   name: string;
   numberOfPeople: number;
   chiefName: string;
-  sendPackage?: void;
 }
